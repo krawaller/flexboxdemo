@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "test": "jasmine-node test",
+    "build": "browserify --debug -t [reactify --es6] src/index.js > bundle.js",
+    "build-dist": "NODE_EMV?production browserify -t [reactify --es6] src/index.js | uglifyjs -m > bundle.min.js"
+  },
+  "devDependencies": {
+    "jasmine-node": ">=1.14.5",
+    "jasmine-sinon": "=0.3.2",
+    "sinon": ">=1.12.2",
+    "prettyjson": "1.0.0",
+    "lodash": ">=3",
+    "immutable": ">=3.6.2",
+    "browserify": ">=9.0.3",
+    "reactify": ">=1.0.0",
+    "react": ">=0.12.2",
+    "uglify-js": ">=2.4.16",
+    "react-router": ">=0.12.4",
+    "reflux": ">=0.2.6"
+  }
+}
