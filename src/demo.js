@@ -5,10 +5,10 @@ var React = require('react'),
 
 var parentoptions = {
 	flexDirection: ["row","row-reverse","column","column-reverse"],
-	flewWrap: ["nowrap","wrap","wrap-reverse"],
+	//flewWrap: ["nowrap","wrap","wrap-reverse"],
 	justifyContent: ["flex-start","flex-end","center","space-between","space-around"],
 	alignItems: ["flex-start","flex-end","center","stretch","baseline"],
-	alignContent: ["flex-start","flex-end","center","stretch","space-between","space-around"]
+	//alignContent: ["flex-start","flex-end","center","stretch","space-between","space-around"]
 };
 
 var childoptions = {
@@ -31,10 +31,10 @@ var Demo = React.createClass({
 	parentDefaults: function(){
 		return {
 			flexDirection: "row", // [row,row-reverse,column,column-reverse]
-			flewWrap: "nowrap", // [nowrap,wrap,wrap-reverse]
+			//flewWrap: "nowrap", // [nowrap,wrap,wrap-reverse]
 			justifyContent: "flex-start", // [flex-start,flex-end,center,space-between,space-around]
 			alignItems: "flex-start", // [flex-start,flex-end,center,stretch,baseline]
-			alignContent: "flex-start", // [flex-start,flex-end,center,stretch,space-between,space-around]
+			//alignContent: "flex-start", // [flex-start,flex-end,center,stretch,space-between,space-around]
 		};
 	},
 	getInitialState: function(){
