@@ -44,7 +44,7 @@ var Demo = React.createClass({
         <div className="explanation">
 This is an interactive demonstration of the CSS3 flexbox layout model. Change the properties of the container to see how
 it affects the layout of the children! You can also edit flex properties for individual children. Click a child to make it
-editable. There is an accompanying blog post <a href="http://blog.krawaller.se/flexdemo">here</a>, and 
+editable. There is an accompanying blog post <a href="http://blog.krawaller.se/posts/an-interactive-css3-flexbox-demonstration/">here</a>, and 
 more info on flexbox can be found <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">here</a>.
         </div>
         <div className="forms">

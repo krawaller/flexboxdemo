@@ -29,7 +29,7 @@
 .form {
   flex-grow: 1;
   border: 1px solid #333;
-  border-radius: 3px;
+  border-radius: 5px;
   padding: 3px;
   background-color: #D4DBFF;
 }
