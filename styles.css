@@ -1,0 +1,60 @@
+.wrapper {
+  width: 600px;
+}
+.container {
+  display: flex;
+  background-color: #C9FFC2;
+  height: 200px;
+  border-radius: 5px;
+  border: 1px solid black;
+  flex-wrap: wrap;
+}
+.child {
+  background-color: #D4DBFF;
+  padding: 5px;
+  margin: 1px;
+  border: 1px solid black;
+  font-size: 10px;
+  border-radius: 5px;
+}
+.odd {
+}
+.even {
+}
+.selectedchild {
+  background-color: #9BB2FF;
+}
+.form {
+  display: inline-block;
+  margin: 3px;
+  border: 1px solid black;
+  padding: 3px;
+}
+
+.formrow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+  font-size: 12px;
+}
+
+.formrow > * {
+  flex-grow: 1;
+  width: 130px;
+  text-align: right;
+  margin-right: 3px;
+}
+
+.form > strong {
+  text-align: center;
+  display: block;
+  margin: 3px;
+}
+
+.forms {
+  display: flex;
+}
+
+.forms > * {
+  flex-grow: 1;
+}

@@ -2,18 +2,13 @@ var React = require('react');
 
 var Dropdown = React.createClass({
 	changeOption: function(e){
-		this.props.callback(this.refs.woo.getDOMNode().value);
+		this.props.callback(this.refs.sel.getDOMNode().value);
 	},
 	render: function(){
-		var opts = this.props.options,
-			current = this.props.current;
-		if (current === undefined){
-			console.log("ALARM!",opts)
-		}
 		return (
-			<select ref="woo" onChange={this.changeOption} defaultValue={''+current} className={"woo: "+current}>
+			<select ref="sel" onChange={this.changeOption} defaultValue={''+this.props.current} >
 				{this.props.options.map(function(o){
-					return <option value={o}>{o}</option>;
+					return <option key={o} value={o}>{o}</option>;
 				})}
 			</select>
 		);
