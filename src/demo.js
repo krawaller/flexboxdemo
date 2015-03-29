@@ -31,18 +31,22 @@ var Demo = React.createClass({
     var arr = Array.prototype.slice.call(arguments),
         val = arr.pop(),
         prop = arr.pop(),
-        s = this.state;
-    while(arr.length) s = s[arr.shift()];
-    s[prop] = _.isFinite(parseInt(val)) ? parseInt(val) : val;
-    this.setState(this.state);
+        clone = _.cloneDeep(this.state),
+        pointer = clone;
+    while(arr.length) pointer = pointer[arr.shift()];
+    pointer[prop] = _.isFinite(parseInt(val)) ? parseInt(val) : val;
+    this.setState(clone);
   },
   render: function(){
     var s = this.state, child = s.selectedId, cbmaker = Function.prototype.bind.bind(this.setValue,this);
     return (
       <div className="wrapper" key={Date() /* rebuild DOM nodes to prevent Chrome flex render bug */}>
-        <p>
-Flexbox demo! Woo! more info <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">here</a>.
-        </p>
+        <div className="explanation">
+This is an interactive demonstration of the CSS3 flexbox layout model. Change the properties of the container to see how
+it affects the layout of the children! You can also edit flex properties for individual children. Click a child to make it
+editable. There is an accompanying blog post <a href="http://blog.krawaller.se/flexdemo">here</a>, and 
+more info on flexbox can be found <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">here</a>.
+        </div>
         <div className="forms">
           <Form title="container" options={parentoptions} values={s.parent} callback={cbmaker("parent")} />
           <Form title={"child #"+(child+1)} options={childoptions} values={s.children[child]} callback={cbmaker("children",child)} />
