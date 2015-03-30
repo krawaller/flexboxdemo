@@ -1,10 +1,11 @@
-var React = require('react');
+var React = require('react'),
+    ptypes = React.PropTypes;
 
 var Dropdown = React.createClass({
   propTypes: {
-    options: React.PropTypes.object.isRequired,
-    current: React.PropTypes.string.isRequired,
-    callback: React.PropTypes.func.isRequired
+    options: ptypes.arrayOf(ptypes.oneOfType([ptypes.string,ptypes.number])).isRequired,
+    current: ptypes.oneOfType([ptypes.string,ptypes.number]).isRequired,
+    callback: ptypes.func.isRequired
   },
   changeOption: function(e){
     this.props.callback(this.refs.sel.getDOMNode().value);

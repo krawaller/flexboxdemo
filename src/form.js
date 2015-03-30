@@ -1,13 +1,14 @@
 var React = require('react'),
     Dropdown = require('./dropdown'),
-    _ = require('lodash');
+    _ = require('lodash'),
+    ptypes = React.PropTypes;
 
 var Form = React.createClass({
   propTypes: {
-    options: React.PropTypes.object.isRequired,
-    values: React.PropTypes.object.isRequired,
-    title: React.PropTypes.string.isRequired,
-    callback: React.PropTypes.func.isRequired
+    options: ptypes.objectOf(ptypes.arrayOf(ptypes.oneOfType([ptypes.string,ptypes.number]))).isRequired,
+    values: ptypes.objectOf(ptypes.oneOfType([ptypes.string,ptypes.number])).isRequired,
+    title: ptypes.string.isRequired,
+    callback: ptypes.func.isRequired
   },
   render: function(){
     var p = this.props;
