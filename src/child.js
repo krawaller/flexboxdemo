@@ -2,6 +2,11 @@ var React = require('react'),
     _ = require('lodash');
 
 var Child = React.createClass({
+  propTypes: {
+    def: React.PropTypes.object.isRequired,
+    selected: React.PropTypes.bool,
+    callback: React.PropTypes.func.isRequired
+  },
   render: function(){
     var p = this.props;
     return (

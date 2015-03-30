@@ -3,6 +3,12 @@ var React = require('react'),
     _ = require('lodash');
 
 var Form = React.createClass({
+  propTypes: {
+    options: React.PropTypes.object.isRequired,
+    values: React.PropTypes.object.isRequired,
+    title: React.PropTypes.string.isRequired,
+    callback: React.PropTypes.func.isRequired
+  },
   render: function(){
     var p = this.props;
     return (
